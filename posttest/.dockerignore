@@ -1,0 +1,22 @@
+# maven or gradle build directories
+target/
+build/
+
+# IDE files
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# logs
+logs/
+*.log
+
+# temporary files
+*.tmp
+*.swp
+*~
+
+# other files
+.DS_Store
+api-collection
