@@ -1,5 +1,5 @@
 #!/bin/bash
 
-cd posttest
+cd ../posttest
 ./gradlew test
 ./gradlew spotlessCheck test
