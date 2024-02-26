@@ -16,7 +16,7 @@ jobs:
             java-version: '17'
             distribution: 'zulu'
       -   name: Run Linter
-	  working-directory: posttest
+	      working-directory: posttest
           run: ./gradlew spotlessCheck
   unit-test:
     name: Run Unit Test
@@ -32,7 +32,7 @@ jobs:
             java-version: '17'
             distribution: 'zulu'
       -   name: Run Unit Tests
-	  working-directory: posttest
+	      working-directory: posttest
           run: ./gradlew test
   build:
     name: Build Java
@@ -49,5 +49,5 @@ jobs:
             java-version: '17'
             distribution: 'zulu'
       -   name: Build Java
-	  working-directory: posttest
+	      working-directory: posttest
           run: ./gradlew build
