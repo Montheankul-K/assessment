@@ -10,10 +10,10 @@ import java.util.List;
 
 @Repository
 public interface UserTicketRepository extends JpaRepository<UserTicket, Long> {
-    @Query("SELECT ut FROM UserTicket ut WHERE ut.userId = :userId")
-    List<UserTicket> findAllPurchaseTicketsByUserId(@Param("userId") String userId);
+	@Query("SELECT ut FROM UserTicket ut WHERE ut.userId = :userId")
+	List<UserTicket> findAllPurchaseTicketsByUserId(@Param("userId") String userId);
 
-    @Modifying
-    @Query("DELETE FROM UserTicket ut WHERE ut.userId = :userId AND ut.ticketId = :ticketId")
-    void deleteTicketsByUserIdAndTicketId(@Param("userId") String userId, @Param("ticketId") Integer ticketId);
+	@Modifying
+	@Query("DELETE FROM UserTicket ut WHERE ut.userId = :userId AND ut.ticketId = :ticketId")
+	void deleteTicketsByUserIdAndTicketId(@Param("userId") String userId, @Param("ticketId") Integer ticketId);
 }
